@@ -1,10 +1,13 @@
-# site-web
+Vous trouverez le code pour:
 
-Inscription;
-Connection;
-Déconnection;
-Supression de compte;
+Une Inscription;
+Une Connection;
+Une Déconnection;
+Une Supression de compte;
 
-Hachage mdp ajouter;
+Avec un Hachage mdp ajouter;
 
-mdp steve , P@ssword
+
+Dans la BDD il y a deja un utilisateur:
+Utilisateur : steve
+MDP : P@ssword
