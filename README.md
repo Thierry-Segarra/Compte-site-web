@@ -5,9 +5,9 @@ Une Connection;
 Une Déconnection;
 Une Supression de compte;
 
-Avec un Hachage mdp ajouter;
+Avec un Hachage mdp ajouté;
 
 
-Dans la BDD il y a deja un utilisateur:
+Dans la BDD il y a déjà un utilisateur:
 Utilisateur : steve
 MDP : P@ssword
