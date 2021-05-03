@@ -1,6 +1,6 @@
 # site-web
 
-Inscription
-Connection
-Déconnection
-Supression de compte
+Inscription;
+Connection;
+Déconnection;
+Supression de compte;
