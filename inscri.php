@@ -14,16 +14,7 @@ if(isset($_POST['username']) && isset($_POST['password'])&& isset($_POST['passwo
     if($username !== "" && $password !== "" && $passwordConf !== "")
     {
         if(strcmp($password,$passwordConf) == 0){
-
-            // une requeste SQL pour savoire si le nom de l'utilisateur n'est pas deja utiliser
-            // si oui mettre un message erreur "nom d'utilisateur deja utiliser"
-
-            //verifier si l'email et deja utiliser
-            // si oui mettre un message erreur "email deja utiliser"
-
-            // requeste SQL inscert du nouveau compte A.G.O et l'envoyer sur la parge Login pour se connecter
-
-            // changer cette requete SQL , elle est la pour exemple
+            
             $requete = "SELECT count(nom_utilisateur) FROM utilisateur where nom_utilisateur = '".$username."'";
             $exec_requete = mysqli_query($db,$requete);
             $reponse      = mysqli_fetch_array($exec_requete);
@@ -32,7 +23,7 @@ if(isset($_POST['username']) && isset($_POST['password'])&& isset($_POST['passwo
             if($count==0) // !=0 si le nom_utilisateur et deja utiliser | == 0 si le nom_utilisateur n'est pas utiliser
             {   
                 $conf = $username;
-                $pwd_peppered = hash_hmac("md5", $password, $conf);
+                $pwd_peppered = hash_hmac("md5", $password, $conf); // sha256 mieux que md5 mais c'est pour le test
 
                 $requete = "INSERT INTO `utilisateur`(`nom_utilisateur`, `mot_de_passe`) VALUES ('".$username."','".$pwd_peppered."')"; // id auto-increase
                 $requete = mysqli_query($db,$requete) or die("Foobar");// doit normalement executer la requete SQL
