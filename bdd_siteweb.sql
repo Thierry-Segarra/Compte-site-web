@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 03 mai 2021 à 16:59
+-- Généré le : sam. 12 nov. 2022 à 16:48
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -28,17 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `utilisateur` (
-  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `nom_utilisateur` varchar(100) NOT NULL,
-  `mot_de_passe` varchar(100) NOT NULL
+  `mot_de_passe` varchar(128) NOT NULL,
+  `role` varchar(10) DEFAULT NULL,
+  `etat` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `utilisateur`
---
-
-INSERT INTO `utilisateur` (`id`, `nom_utilisateur`, `mot_de_passe`) VALUES
-(1, 'steve', 'b43e460564cf63bec0e26ed147aa7035');
 
 --
 -- Index pour les tables déchargées
@@ -48,7 +43,7 @@ INSERT INTO `utilisateur` (`id`, `nom_utilisateur`, `mot_de_passe`) VALUES
 -- Index pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -58,7 +53,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

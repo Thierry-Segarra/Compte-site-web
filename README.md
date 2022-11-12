@@ -4,14 +4,10 @@ Une Inscription;
 Une Connection;
 Une Déconnection;
 Une Supression de compte;
+role Admin
+Page pour bannir, débannir, suprimer des comptes;
 
-Avec un Hachage mdp ajouté;
+inscription avec le mot de passe qui respect le RGPD
+hachage mdp avec sha_512
 
-Dans la BDD il y a déjà un utilisateur:
-Utilisateur : steve
-MDP : P@ssword
-
-Pour que tout cela marche vous devez regarder le document connect.php et vérifier que le nom de la base de donnée correspont au nom de votre base de donnée
-
-Apres cela tout devrez marcher correctement
 
