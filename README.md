@@ -6,6 +6,7 @@ Une Déconnection;
 Une Supression de compte;
 role Admin
 Page pour bannir, débannir, suprimer des comptes;
+paramètre compte;
 
 inscription avec le mot de passe qui respect le RGPD
 hachage mdp avec sha_512
